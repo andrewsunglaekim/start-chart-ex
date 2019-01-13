@@ -27,15 +27,16 @@ class ScatterPlotChart {
         chartHeight: this.height,
         chartWidth: this.width,
         suffix: this.suffix,
-        range: this.range,
+        rangeX: this.data.length,
+        rangeY: this.getRangeY(),
       });
       this.el.appendChild(scatterPlotChartPoint.el);
     })
   }
 
-  range() {
+  getRangeY() {
     const min = Math.min(...this.data);
     const max = Math.max(...this.data);
-    return { min, max };
+    return max - min;
   }
 }

@@ -1,8 +1,18 @@
+.app {
+  text-align: center;
+}
+
 .scatter-plot-chart {
+  margin: auto;
+  margin-top: 100px;
   position: relative;
 }
 
 .scatter-plot-chart__point {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   text-align: center;
   border-radius: 50%;
@@ -10,6 +20,4 @@
   left: 0;
   background: #ccc;
   color: #eee;
-  height: 20px;
-  width: 20px;
 }
