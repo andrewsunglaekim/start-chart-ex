@@ -9,6 +9,7 @@
 }
 
 .scatter-plot-chart__point {
+  transition: transform 1s ease;
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -29,6 +30,8 @@
 }
 
 .bar-chart__bar {
+  transition: all 1s ease;
+  max-height: 0;
   color: #eee;
   font-size: 12px;
   bottom: 0;

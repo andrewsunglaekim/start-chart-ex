@@ -31,8 +31,11 @@ class BarChartBar {
 
   setStyles() {
     const transformValue = `translateX(${this.getTranslateX()})`;
-    this.el.style.transform = transformValue;
-    this.el.style.height = this.getHeight();
-    this.el.style.width = `${this.width}px`
+    this.el.style.width = `${this.width}px`;
+    setTimeout(() => {
+      this.el.style.height = this.getHeight()
+      this.el.style.maxHeight = '200px';
+      this.el.style.transform = transformValue;
+    })
   }
 }

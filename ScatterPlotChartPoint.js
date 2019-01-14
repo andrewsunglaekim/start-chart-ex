@@ -21,9 +21,11 @@ class ScatterPlotChartPoint {
 
   setStyles() {
     const transformValue = `translate(${this.getTranslateX()}, ${this.getTranslateY()})`
-    this.el.style.transform = transformValue;
     this.el.style.height = `${this.height}px`
     this.el.style.width = `${this.width}px`
+    setTimeout(() => {
+      this.el.style.transform = transformValue;
+    }, 0)
   }
 
   getTranslateX() {
