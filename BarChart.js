@@ -1,15 +1,15 @@
-class ScatterPlotChart extends Chart{
+class BarChart extends Chart {
   constructor(args) {
     super({
       ...args,
-      className: 'scatter-plot-chart'
+      className: 'bar-chart',
     });
-    this.appendPoints();
+    this.appendBars();
   }
 
-  appendPoints() {
+  appendBars() {
     this.data.forEach((dataPoint, i) => {
-      const scatterPlotChartPoint = new ScatterPlotChartPoint({
+      const barChartBar = new BarChartBar({
         value: dataPoint,
         index: i,
         chartHeight: this.height,
@@ -18,7 +18,7 @@ class ScatterPlotChart extends Chart{
         rangeX: this.data.length,
         rangeY: this.getRangeY(),
       });
-      this.el.appendChild(scatterPlotChartPoint.el);
+      this.el.appendChild(barChartBar.el);
     })
   }
 }

@@ -7,5 +7,13 @@ const scatterChart = new ScatterPlotChart({
   data,
 })
 
+const barChart = new BarChart({
+  height: 100,
+  width: 500,
+  suffix: 'px',
+  data,
+})
+
 const mainEl = document.querySelector('.app__main');
 mainEl.appendChild(scatterChart.el)
+mainEl.appendChild(barChart.el)
